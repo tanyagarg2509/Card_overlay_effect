@@ -15,11 +15,38 @@
 </head>
 
 <body>
-   
-<canvas id=c>
-     <header>
+    <div id="curtain">
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="navText">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <div class="hamburger toggle" onclick="toggle(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- <div class="toggle" onclick="toggle()">
+
+        </div> -->
+    </div>
+    <script>
+        function toggle(x) {
+            var curtain = document.getElementById('curtain');
+            curtain.classList.toggle('active');
+            x.classList.toggle("change");
+        }
+    </script>
+    <header>
         <div>
-            SYNERGY
+            TEAM PAGE
         </div>
     </header>
 
@@ -93,22 +120,22 @@
         </div>
 
     </div>
-</canvas>
+
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-5">
                     <div class="otherLinks">
                         <div class="head"></div>
                         <ul>
-                            <li><a href="https://www.facebook.com/igdtuwsportsclub/"><i class="fa fa-facebook-f">&nbsp&nbsp</i></a>www.facebook.com/igdtuwsportsclub</li>
+                            <li><a href="https://www.facebook.com/igdtuwsportsclub/"><i class="fa fa-facebook-f">&nbsp&nbsp</i>www.facebook.com/igdtuwsportsclub</a></li>
                             <li><a href="https://www.instagram.com/ignite_igdtuw/?hl=en"><i class="fa fa-instagram">&nbsp&nbsp</i>www.instagram.com/ignite_igdtuw</a></li>
                             <li><a href=""><i class="fa fa-envelope">&nbsp&nbsp</i>synergy.igdtuw@gmail.com</a></li>
                         </ul>
 
                     </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <div class="contacts">
                         <div class="head">Contacts</div>
                         <div>INDIRA GANDHI DELHI TECHNICAL UNIVERSITY FOR WOMEN (IGDTUW)</div>
