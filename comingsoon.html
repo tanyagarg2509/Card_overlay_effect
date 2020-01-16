@@ -1,10 +1,21 @@
-/*navbar*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&effect=shadow-multiple|emboss|3d" rel="stylesheet">
 
+    <title>Ignite-Synergy</title>
+    
+</head>
+<body style="background-color: #1C163A;">
+    <style type="text/css">
+        
 body {
     min-height: 100vh;
 }
@@ -23,7 +34,7 @@ li{
     align-items: center;
     z-index: 10;
     
-     transition: 0.7s ease-in-out;
+    transition: 0.7s ease-in-out;
 }
 
 #curtain span {
@@ -88,9 +99,6 @@ li{
     transition: 0.5s;
 }
 
-#curtain.active #curtain {
-    height: 100%;
-}
 
 .navText {
     position: absolute;
@@ -171,138 +179,67 @@ li{
         top: 25px;
     }
     #curtain ul li a {
-        font-size: 2em;
+        font-size:2em;
     }
 }
-
-/*body*/
-header {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0px;
-    background-image: url(giphy1.gif);
-    background-position: fixed;
-    background-repeat: repeat-y;
-    background-size: cover;
-}
-
-header div {
-    text-align: center;
-    margin: auto;
-    padding: 20px;
-    font-size: 3em;
-     line-height: 2em; 
-   
-    font-family: 'Sacramento', cursive;
-     
-}
-
-.font-effect-3d {
-    color:blue;
-    font-weight: bolder;
-}
-.outerBox {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.outerBox .box {
-    position: relative;
-    height: 300px;
-    width: 300px;
-    margin: 10px;
-    overflow: hidden;
-}
-
-.outerBox .box .imgBx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: 1.5s ease-in-out;
-}
-
-.imgBx img {
-    height: 100%;
-}
-
-.outerBox .box:hover .imgBx {
-    transform: translateY(-100%);
-}
-
-.outerBox .box .contentBx {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    color: #fff;
-    text-align: center;
-    /* transform: translateY(100%); */
-    transition: 1.5s ease-in-out all;
-}
-.outerBox .box .contentBx h2{
-    padding: 10px;
-
-}
-.outerBox .box .contentBx div{
-    text-align: justify;
-    font-size: 15px;
-}
-.outerBox .box:hover .contentBx {
-    /* transform: translateY(0); */
-    top: 0;
-}
+    </style>
 
 
-/* footer */
 
-#map {
-    margin-top: 10px;
-    width: 200px;
-    height: 150px;
-    background-color: aqua;
-    background-color: aqua;
-}
+    <div id="curtain">
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="navText">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <div class="hamburger toggle" onclick="toggle(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <script>
+        function toggle(x) {
+            var curtain = document.getElementById('curtain');
+            curtain.classList.toggle('active');
+            x.classList.toggle("change");
+            if ($('#curtain').height() == 0)
+                $('#curtain').height('100%');
+            else
+                $('#curtain').height('0%');
+        }
+    </script>
 
-footer {
-    padding: 10px 0px;
-    background-color: black;
-}
+     <div class="flex-container">
+         <img  src="https://gifimage.net/wp-content/uploads/2017/10/coming-soon-animated-gif-8.gif">
+  
+     </div>
+<style type="text/css">
+    .flex-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
 
-footer .head {
-    color: white;
-    text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
+    }
+    .flex-container img{
+        width:70%;
+        height: auto;
+        display: block;
+    }
+    @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .flex-container img{
+        width: 100%;
+    }
 }
+</style>
 
-footer .otherLinks ul {
-    /*list-style-type: square;
-*/    color: white;
-}
-
-footer .otherLinks ul li {
-    padding-top: 7px;
-    margin-left: 10px;
-    padding-bottom: 7px;
-}
-
-footer .otherLinks ul li a {
-    color: white;
-    text-transform: capitalize;
-    font-size: 13px;
-}
-
-footer .contacts {
-    color: white;
-    font-size: 13px;
-}
+</body>
+</html>
