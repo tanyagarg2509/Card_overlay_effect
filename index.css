@@ -16,12 +16,14 @@ li{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+  
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    
+     transition: 0.7s ease-in-out;
 }
 
 #curtain span {
@@ -79,18 +81,15 @@ li{
     right: 20px;
     width: 50px;
     height: 50px;
-    /* background: #111 url(menu.png); */
-    background-repeat: no-repeat;
-    background-position: 5px;
+/* background-repeat: no-repeat;
+    background-position: 5px;*/
     z-index: 1000;
     cursor: pointer;
     transition: 0.5s;
 }
 
-#curtain.active .toggle {
-    /* background: #fff url(close.png); */
-    background-repeat: no-repeat;
-    background-position: 5px;
+#curtain.active #curtain {
+    height: 100%;
 }
 
 .navText {
@@ -137,7 +136,7 @@ li{
 .bar3 {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -195,14 +194,19 @@ header div {
     margin: auto;
     padding: 20px;
     font-size: 3em;
-    /* line-height: 2em; */
-    color: chocolate;
+     line-height: 2em; 
+   
+    font-family: 'Sacramento', cursive;
+     
 }
 
+.font-effect-3d {
+    color:blue;
+    font-weight: bolder;
+}
 .outerBox {
     display: flex;
     width: 100%;
-
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -240,10 +244,18 @@ header div {
     height: 100%;
     background: #111;
     color: #fff;
+    text-align: center;
     /* transform: translateY(100%); */
     transition: 1.5s ease-in-out all;
 }
+.outerBox .box .contentBx h2{
+    padding: 10px;
 
+}
+.outerBox .box .contentBx div{
+    text-align: justify;
+    font-size: 15px;
+}
 .outerBox .box:hover .contentBx {
     /* transform: translateY(0); */
     top: 0;
